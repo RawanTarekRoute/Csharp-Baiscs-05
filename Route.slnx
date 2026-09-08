@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Common/Common.csproj" />
+  <Project Path="Route.CsharpBasics05/Route.CsharpBasics05.csproj" />
+</Solution>
