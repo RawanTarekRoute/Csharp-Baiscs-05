@@ -1,14 +1,16 @@
 ﻿using Common;
+using Common.UserDefinedDataType;
 using Route.CsharpBasics05.AccessModifiers;
 namespace Route.Csharp05
 {
     internal class Program
     {
-       // ProgramClass => PascalCase
-         static int AddTwoNumber(int a , int b) {
-           int result =  a + b;
+        // ProgramClass => PascalCase
+        static int AddTwoNumber(int a, int b)
+        {
+            int result = a + b;
             return result;
-            
+
         }
 
         static void MultiplyByTwo(int number)
@@ -27,7 +29,7 @@ namespace Route.Csharp05
         {
             if (prices is not null && prices.Length > 0)
             {
-                for(int i = 0; i < prices.Length; i++)
+                for (int i = 0; i < prices.Length; i++)
                 {
                     prices[i] -= 5;
                 }
@@ -59,7 +61,7 @@ namespace Route.Csharp05
         {
             if (prices is not null && prices.Length > 0)
             {
-                for(int i = 0; i < prices.Length; i++)
+                for (int i = 0; i < prices.Length; i++)
                 {
                     prices[i] -= 5;
                 }
@@ -73,7 +75,7 @@ namespace Route.Csharp05
 
         static void PrintNumbers(int size, params int[] numbers)
         {
-            foreach(int number in numbers)
+            foreach (int number in numbers)
             {
                 Console.WriteLine(number);
             }
@@ -81,7 +83,7 @@ namespace Route.Csharp05
 
         static void PrintNames(params string[] names)
         {
-            foreach(string name in names)
+            foreach (string name in names)
             {
                 Console.WriteLine(name);
             }
@@ -429,7 +431,51 @@ namespace Route.Csharp05
 
             #endregion
 
-          
+            #region User Defined Data Type
+
+            /*
+             * - Namespace: container to group related classes, structs, enums, interfaces.
+             * - What can be written in a namespace: 
+             *      1. Classes
+             *      2. Structs 
+             *      3. Enums
+             *      4. Interfaces
+             * -  Allowed Access Modifiers inside namespace: (Internal "Default", Public)
+             */
+
+            //string gender = "Make";
+
+            //// 1. Male , 2. Female
+            //// 3
+            // 0
+            //Gender gender = new Gender();
+            //gender = (Gender) 10;
+            //Console.WriteLine(gender.ToString()); // 10
+
+            //if (gender == Gender.Male || gender == Gender.Female)
+            //    Console.WriteLine("Valid Gender");
+            //else
+            //    Console.WriteLine("Invalid Gender");
+
+            //bool isValidGender = Enum.IsDefined(typeof(Gender), gender);
+
+            //if (isValidGender)
+            //    Console.WriteLine("Valid Gender");
+            //else
+            //    Console.WriteLine("Invalid Gender");
+
+            // female, Female
+
+            // True => Label or value
+            // false
+            //bool isValidGender = Enum.TryParse(gender, true, out gender);
+
+            //if (isValidGender)
+            //    Console.WriteLine("Valid Gender");
+            //else
+            //    Console.WriteLine("Invalid Gender");
+
+            #endregion
 
         }
     }
